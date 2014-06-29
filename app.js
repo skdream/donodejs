@@ -8,6 +8,7 @@ var routes = require('./routes');
 var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
+
 var MongoStore = require('connect-mongo')(express);
 var flash = require('connect-flash'); //https://github.com/jaredhanson/connect-flash
 var settings = require('./settings');
@@ -29,14 +30,15 @@ app.use(express.logger({stream:accesslog}));
 
 app.use(express.json());
 app.use(express.urlencoded());
-app.use(express.methodOverride());
-app.use(express.cookieParser('your secret here'));
+//app.use(require('method-override')());
+app.use(require('method-override')());
+app.use(express.cookieParser(settings.cookieSecret));
 app.use(express.session({
 	secret: settings.cookieSecret, // session cookie is signed with this secret to prevent tampering
-	key: settings.db, // cookie name defaulting to connect.sid
-	cookie:{maxAge: 1000 * 60 * 60 * 24 *30} //30 days
+	key: settings.db_name, // cookie name defaulting to connect.sid
+	cookie:{maxAge: 1000 * 60 * 60 * 24 *30}, //30 days
 	store: new MongoStore({
-		db.settings.db
+		db:settings.db_name
 	})
 }));
 app.use(app.router);

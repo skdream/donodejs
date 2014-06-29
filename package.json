@@ -9,9 +9,13 @@
     "express": "3.10.3",
     "ejs": "*",
     "less-middleware": "~0.1.15",
+      "method-override": "2.0.2",
 	"mongodb":"*",
+    "mongoose" :"3.8.12",
 	"connect-mongo":"*" ,
 	"connect-flash":"*",
-	"markdown":"*"
+	"markdown":"*",
+    "xss": "~0.1.9",
+    "eventproxy": "0.3.1"
   }
 }
