@@ -1,0 +1,6 @@
+127.0.0.1 - - [Sun, 29 Jun 2014 13:05:08 GMT] "POST /signup/ HTTP/1.1" 500 - "http://localhost:3000/signup/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36"
+127.0.0.1 - - [Sun, 29 Jun 2014 13:05:16 GMT] "GET /signup/ HTTP/1.1" 200 520 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36"
+127.0.0.1 - - [Sun, 29 Jun 2014 13:05:16 GMT] "GET /stylesheets/style.css HTTP/1.1" 200 110 "http://localhost:3000/signup/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36"
+127.0.0.1 - - [Sun, 29 Jun 2014 13:05:46 GMT] "POST /signup/ HTTP/1.1" 200 383 "http://localhost:3000/signup/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36"
+127.0.0.1 - - [Sun, 29 Jun 2014 13:05:46 GMT] "GET /stylesheets/style.css HTTP/1.1" 304 - "http://localhost:3000/signup/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36"
+127.0.0.1 - - [Sun, 29 Jun 2014 13:06:15 GMT] "POST /signup/ HTTP/1.1" 500 - "http://localhost:3000/signup/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36"
