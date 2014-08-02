@@ -296,11 +296,11 @@ h4{
 .toolBar li.hover, .toolBar li.hover a, .toolBar li.hover span, .toolBar span,
 .pagination, .pagination li.hover, .pagination li.hover a, .pagination li span,
 .pagination li.disabled span span,
-.panelBar .line, .pagination li.jumpto, .pagination li.jumpto .goto { background:url(./images/grid/grid.png) no-repeat;}
+.panelBar .line, .pagination li.jumpto, .pagination li.jumpto .goto { background:url(../images/grid.png) no-repeat;}
 /* Pages default */
-.page .pageHeader, .formBar { border-color:#b8d0d6; background:#ebf0f5 url(../default/images/pageHeader_bg.png) repeat-x;}
+.page .pageHeader, .formBar { border-color:#b8d0d6; background:#ebf0f5 url(../images/pageHeader_bg.png) repeat-x;}
 .page .searchBar label { color:#183152;}
 /* combox */
 .combox .select a  { color:#183152; }
 .comboxop { border-color:#B8D0D6; }
-.combox, .combox div, .combox div a { background:url(../default/images/search-bg.gif) no-repeat; }
+.combox, .combox div, .combox div a { background:url(../images/search-bg.gif) no-repeat; }
