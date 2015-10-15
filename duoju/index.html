@@ -49,8 +49,8 @@
 		<div id="article" class="article">
 			
 		</div>
-		<div class="act ">
-			<div class="act-content">
+		<div id="act" class="act ">
+<!-- 			<div class="act-content">
 				<div class="act-l">
 					<div class="act-item left">
 						<div class="act-item__hd">
@@ -108,7 +108,7 @@
 				<div class="join-right">
 					<a href="#">查看参与用户</a>
 				</div>
-			</div>
+			</div> -->
 		</div>
 		<div class="star-box">
 			<div class="star-wrap">
@@ -122,56 +122,57 @@
 			</div>
 		</div>
 
-		<div class="approval">
-			<div class="approval-top">
-				<div class="approval-heart">
-					<i class="icon-heart"></i>
-				</div>
-				<div class="approval-num">
-					2100人点赞
-				</div>
-			</div>
-			<div class="approval-bottom">
-				<span class="avatar">
-					<img src="http://image.duoju.info/avatar/69264.jpg?imageView2/1/w/100/h/100" alt="">
-				</span>
-				<span class="avatar">
-					<img src="http://image.duoju.info/avatar/67849.jpg?imageView2/1/w/100/h/100" alt="">
-				</span>
-				<span class="avatar">
-					<img src="http://image.duoju.info/avatar/67845.jpg?imageView2/1/w/100/h/100" alt="">
-				</span>
-				<span class="avatar">
-					<img src="http://image.duoju.info/avatar/67841.jpg?imageView2/1/w/100/h/100" alt="">
-				</span>
-				<span class="avatar">
-					<img src="http://image.duoju.info/avatar/69264.jpg?imageView2/1/w/100/h/100" alt="">
-				</span>
-				<span class="avatar">
-					<img src="http://image.duoju.info/avatar/67849.jpg?imageView2/1/w/100/h/100" alt="">
-				</span>
-				<span class="avatar">
-					<img src="http://image.duoju.info/avatar/67845.jpg?imageView2/1/w/100/h/100" alt="">
-				</span>
-				<span class="avatar">
-					<img src="http://image.duoju.info/avatar/67841.jpg?imageView2/1/w/100/h/100" alt="">
-				</span>
-				<span class="avatar">
-					<img src="http://image.duoju.info/avatar/69264.jpg?imageView2/1/w/100/h/100" alt="">
-				</span>
-				<span class="avatar">
-					<img src="http://image.duoju.info/avatar/67849.jpg?imageView2/1/w/100/h/100" alt="">
-				</span>
-				<span class="avatar">
-					<img src="http://image.duoju.info/avatar/67845.jpg?imageView2/1/w/100/h/100" alt="">
-				</span>
-				<span class="avatar">
-					<img src="http://image.duoju.info/avatar/67841.jpg?imageView2/1/w/100/h/100" alt="">
-				</span>
-			</div>
+		<div id="good" class="approval">
+<!-- 			<div class="approval-top">
+	<div class="approval-heart">
+		<i class="icon-heart"></i>
+	</div>
+	<div class="approval-num">
+		2100人点赞
+	</div>
+</div>
+<div class="approval-bottom">
+	<span class="avatar">
+		<img src="http://image.duoju.info/avatar/69264.jpg?imageView2/1/w/100/h/100" alt="">
+	</span>
+	<span class="avatar">
+		<img src="http://image.duoju.info/avatar/67849.jpg?imageView2/1/w/100/h/100" alt="">
+	</span>
+	<span class="avatar">
+		<img src="http://image.duoju.info/avatar/67845.jpg?imageView2/1/w/100/h/100" alt="">
+	</span>
+	<span class="avatar">
+		<img src="http://image.duoju.info/avatar/67841.jpg?imageView2/1/w/100/h/100" alt="">
+	</span>
+	<span class="avatar">
+		<img src="http://image.duoju.info/avatar/69264.jpg?imageView2/1/w/100/h/100" alt="">
+	</span>
+	<span class="avatar">
+		<img src="http://image.duoju.info/avatar/67849.jpg?imageView2/1/w/100/h/100" alt="">
+	</span>
+	<span class="avatar">
+		<img src="http://image.duoju.info/avatar/67845.jpg?imageView2/1/w/100/h/100" alt="">
+	</span>
+	<span class="avatar">
+		<img src="http://image.duoju.info/avatar/67841.jpg?imageView2/1/w/100/h/100" alt="">
+	</span>
+	<span class="avatar">
+		<img src="http://image.duoju.info/avatar/69264.jpg?imageView2/1/w/100/h/100" alt="">
+	</span>
+	<span class="avatar">
+		<img src="http://image.duoju.info/avatar/67849.jpg?imageView2/1/w/100/h/100" alt="">
+	</span>
+	<span class="avatar">
+		<img src="http://image.duoju.info/avatar/67845.jpg?imageView2/1/w/100/h/100" alt="">
+	</span>
+	<span class="avatar">
+		<img src="http://image.duoju.info/avatar/67841.jpg?imageView2/1/w/100/h/100" alt="">
+	</span>
+</div> -->
 		</div>
 
-		<div class="comment">
+		<div id="comment" class="comment">
+		<!-- 			
 			<div class="comment-hd">
 				评论（53）
 			</div>
@@ -243,11 +244,12 @@
 					</li>
 				</ul>
 				<a class="comm-more" href="#">查看更多评论</a>
-			</div>
+			</div> 
+		-->
 		</div>
 		<div class="action">
-			<span class="total-fee">
-				1000-9999元
+			<span id="price" class="total-fee">
+				_
 			</span>
 			<a class="act-btn" href="#">我要报名</a>
 		</div>
@@ -268,18 +270,170 @@
 	</div>
 </div>
 
+<!-- 活动 -->
+
+
+<script id="actTpl" type="text/html">
+	<div class="act-content">
+	<div class="act-l">
+		<div class="act-item left">
+			<div class="act-item__hd">
+				类型
+			</div>
+			<div class="act-item__bd">
+				<span>
+					{{category.name}}
+				</span>
+			</div>
+		</div>
+		<div class="act-item right">
+			<div class="act-item__hd">
+				费用
+			</div>
+			<div class="act-item__bd">
+				<span class="">
+					{{priceRange}}
+				</span>
+			</div>
+		</div>
+	</div>
+	<div class="act-mid">
+	</div>
+	<div class="act-r">
+		<div class="act-item act-item__single">
+			<div class="act-item__hd">
+				活动时间
+			</div>
+			<div class="act-item__bd">
+				<span class="time">
+					{{beginTime}}
+				</span>
+				<span class="sep">~</span>
+				<span class="time">
+					{{endTime}}
+				</span>
+				
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="join">
+	<div class="join-left">
+		<div class="bar">
+			<div class="bar-inner">
+				
+			</div>
+		</div>
+		<div class="join-num">
+			{{approvalNum}}人参与
+		</div>
+	</div>
+	<div class="join-right">
+		<a href="#">查看参与用户</a>
+	</div>
+	</div>
+
+</script>
+
+<!-- 赞 -->
+<script id="goodTpl" type="text/html">
+	<div class="approval-top">
+		<div class="approval-heart">
+			<i class="icon-heart"></i>
+		</div>
+		<div class="approval-num">
+			{{goodCount}}人点赞
+		</div>
+	</div>
+	<div class="approval-bottom">
+		{{each goodUserList as good i}}
+		<span class="avatar">
+			<img src="{{good.user.smallAvatar}}" alt="{{good.user.username}}">
+		</span>
+		{{/each}}
+
+	</div>
+</script>
+
+<!-- 评论 -->
+
+<script id="commentTpl" type="text/html">
+	<div class="comment-hd">
+	    评论（{{commentCount}}）
+	</div>
+	<div class="comment-bd">
+	    <ul>
+	    {{each commentList as comment i}}
+	         <li>
+	            <div class="comm-top">
+	                <span class="avatar">
+	                    <img src="{{comment.user.smallAvatar}}" alt="{{comment.user.username}}">
+	                </span>
+	                <span class="uname">
+	                    {{comment.user.username}}
+	                </span>
+	                <span class="time">
+	                    {{comment.addTime}}
+	                </span>
+	            </div>
+	            <div class="comm-con">
+	                {{comment.content}}
+	            </div>
+	        </li>       
+	    {{/each}}
+
+	    </ul>
+	    <a class="comm-more" href="#">查看更多评论</a>
+	</div>
+</script>
+
 <!-- <script type='text/javascript' src='./js/jquery.js'></script> -->
 <script type='text/javascript' src='./js/zepto.js'></script>
+<script type='text/javascript' src='./js/template.js'></script>
 <script>
 
 $(function(){
-	$('#article').load("./data/content.html #main")
 
-	//$("#main").html("sdfsdfdssdfsdf")
+	var contentURL = "./data/content.html #main", //http://jk.duoju.info/api/party/detail/107343
+		detailURL = "./data/detail.json", // http://jk.duoju.info/api/party/detail/107343
+		detailId = "",
+		$comment = $('#comment'),
+		$good = $('#good'),
+		$act   = $('#act'),
+		$price = $('#price');
+
+
+	//$('#article').load(contentURL);
+
+	$.getJSON(detailURL,function(data){
+		if(data.code ===1){
+			console.log(data);
+			var info = data.info,
+				party = info.party,
+			    actHTML = template("actTpl",party),
+				commentHTML = "",
+				goodHTML = "";
+
+			$act.html(actHTML);
+
+			if(party.goodCount>0){
+				goodHTML= template("goodTpl",party);
+				$good.html(goodHTML);
+			}else{
+				$good.hide();
+			}
+
+			if(party.commentCount > 0){
+				commentHTML = template('commentTpl', party);
+				$comment.html(commentHTML);
+			}else{
+				$comment.hide();
+			}
+
+			$price.html(party.priceRange)
+		}
+	});
 });
-
-
-
 </script>
 </body>
 </html>
