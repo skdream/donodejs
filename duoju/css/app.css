@@ -91,7 +91,7 @@ body{
 	padding:0 10px;
 	border-top: 1px solid #dddddd;
 	background-color: #fff;
-	margin-bottom: 10px;
+/*	margin-bottom: 10px;*/
 	    box-sizing: border-box;
 }
 
@@ -428,3 +428,47 @@ padding-left: 15px;
 	border-radius: 5px;
 	margin-top: 10px;
 }
+
+
+.map-box{ margin: 0 auto; width: 100%; height: 240px; margin-bottom: 10px}
+
+.map-box .marker-con{
+	position: relative;
+
+}
+
+.map-box .icon {
+	background: url(http://js.webapi.amap.com/theme/v1.3/markers/n/loc.png) no-repeat;
+}
+.map-box .icon-cir {height: 23px; width: 23px; }
+.map-box .place{
+	background-color: #fff;
+	border: 1px solid #ddd;
+	padding: 15px 10px;
+}
+
+
+.map-box .shadow{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	border-radius: 50%;
+	background-color: #2d93ff;
+	animation: zoomInScale 2s infinite both;
+}
+
+@keyframes zoomInScale {
+  from {
+    opacity: 1;
+    transform: scale3d(.3, .3, .3);
+  }
+  100%{
+  	 opacity: 0;
+  	  transform: scale3d(4, 4, 4);
+  }
+}
+
+
+

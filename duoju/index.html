@@ -110,6 +110,11 @@
 				</div>
 			</div> -->
 		</div>
+		<div class="map-box">
+			<div id="mapContainer" class="map-container">
+				
+			</div>
+		</div>
 		<div class="star-box">
 			<div class="star-wrap">
 				<i class="icon-star"></i>
@@ -269,10 +274,7 @@
 		</div>
 	</div>
 </div>
-
 <!-- 活动 -->
-
-
 <script id="actTpl" type="text/html">
 	<div class="act-content">
 	<div class="act-l">
@@ -332,9 +334,7 @@
 		<a href="#">查看参与用户</a>
 	</div>
 	</div>
-
 </script>
-
 <!-- 赞 -->
 <script id="goodTpl" type="text/html">
 	<div class="approval-top">
@@ -354,9 +354,7 @@
 
 	</div>
 </script>
-
 <!-- 评论 -->
-
 <script id="commentTpl" type="text/html">
 	<div class="comment-hd">
 	    评论（{{commentCount}}）
@@ -386,54 +384,13 @@
 	    <a class="comm-more" href="#">查看更多评论</a>
 	</div>
 </script>
-
 <!-- <script type='text/javascript' src='./js/jquery.js'></script> -->
+<script src="http://webapi.amap.com/maps?v=1.2&key=0eb2850716f372430187a215aab1f03a"></script>
+<script type='text/javascript' src='./js/index.js'></script>
+<!--
 <script type='text/javascript' src='./js/zepto.js'></script>
 <script type='text/javascript' src='./js/template.js'></script>
-<script>
-
-$(function(){
-
-	var contentURL = "./data/content.html #main", //http://jk.duoju.info/api/party/detail/107343
-		detailURL = "./data/detail.json", // http://jk.duoju.info/api/party/detail/107343
-		detailId = "",
-		$comment = $('#comment'),
-		$good = $('#good'),
-		$act   = $('#act'),
-		$price = $('#price');
-
-
-	//$('#article').load(contentURL);
-
-	$.getJSON(detailURL,function(data){
-		if(data.code ===1){
-			console.log(data);
-			var info = data.info,
-				party = info.party,
-			    actHTML = template("actTpl",party),
-				commentHTML = "",
-				goodHTML = "";
-
-			$act.html(actHTML);
-
-			if(party.goodCount>0){
-				goodHTML= template("goodTpl",party);
-				$good.html(goodHTML);
-			}else{
-				$good.hide();
-			}
-
-			if(party.commentCount > 0){
-				commentHTML = template('commentTpl', party);
-				$comment.html(commentHTML);
-			}else{
-				$comment.hide();
-			}
-
-			$price.html(party.priceRange)
-		}
-	});
-});
-</script>
+<script type='text/javascript' src='./js/index.js'></script>
+-->
 </body>
 </html>
