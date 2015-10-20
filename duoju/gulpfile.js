@@ -91,7 +91,7 @@ gulp.task('watch', function () {
   gulp.watch('./js/*.js', ['js']);
 });
 gulp.task('html', function () {
-  return gulp.src(['./dist/rev/**/*.json', './index.html'])
+  return gulp.src(['./dist/rev/**/*.json', './index.html','./comment.html','./pingjia.html'])
     .pipe( minifyHTML({
                 empty:true,
                 spare:true

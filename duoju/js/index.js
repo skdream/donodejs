@@ -1,15 +1,96 @@
 var $ = require('./jquery');
-var template = require('./template');
+var template = require('./template-native');
+
+
+/** 
+ * 对日期进行格式化， 
+ * @param date 要格式化的日期 
+ * @param format 进行格式化的模式字符串
+ *     支持的模式字母有： 
+ *     y:年, 
+ *     M:年中的月份(1-12), 
+ *     d:月份中的天(1-31), 
+ *     h:小时(0-23), 
+ *     m:分(0-59), 
+ *     s:秒(0-59), 
+ *     S:毫秒(0-999),
+ *     q:季度(1-4)
+ * @return String
+ * @author yanis.wang
+ * @see	http://yaniswang.com/frontend/2013/02/16/dateformat-performance/
+ */
+// template.helper('dateFormat', function (date, format) {
+
+//     date = new Date(date);
+
+//     var map = {
+//         "M": date.getMonth() + 1, //月份 
+//         "d": date.getDate(), //日 
+//         "h": date.getHours(), //小时 
+//         "m": date.getMinutes(), //分 
+//         "s": date.getSeconds(), //秒 
+//         "q": Math.floor((date.getMonth() + 3) / 3), //季度 
+//         "S": date.getMilliseconds() //毫秒 
+//     };
+//     format = format.replace(/([yMdhmsqS])+/g, function(all, t){
+//         var v = map[t];
+//         if(v !== undefined){
+//             if(all.length > 1){
+//                 v = '0' + v;
+//                 v = v.substr(v.length-2);
+//             }
+//             return v;
+//         }
+//         else if(t === 'y'){
+//             return (date.getFullYear() + '').substr(4 - all.length);
+//         }
+//         return all;
+//     });
+//     return format;
+// });
+
+
+template.helper('dateFormat', function (mdate, from,to) {
+
+  return mdate.substr(from,to);
+});
+
+var util = {
+    
+    getParam:function(name) {
+        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        var regexS = "[\\?&]" + name + "=([^&#]*)";
+        var regex = new RegExp(regexS);
+        var results = regex.exec(window.location.search);
+        if(results == null) {
+            return "";
+        } else {
+            return decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+    }
+}
+
 
 $(function(){
-
-	var contentURL = "./data/content.html #main", //http://jk.duoju.info/api/party/detail/107343
-		detailURL = "./data/detail.json", // http://jk.duoju.info/api/party/detail/107343
+    
+	var id = util.getParam('id'),
+        contentURL = "", // "http://jk.duoju.info/api/page/party/content/" + id +"#main",
+		detailURL = "", // "http://jk.duoju.info/api/party/detail/" + id,
 		detailId = "",
+        url = document.location.href,
 		$comment = $('#comment'),
 		$good = $('#good'),
 		$act   = $('#act'),
+        $starBox = $('#starBox'),
 		$price = $('#price');
+        
+    if(url.indexOf('duoju')>-1){
+        contentURL = "http://jk.duoju.info/api/page/party/content/" + id +"#main";
+		detailURL =  "http://jk.duoju.info/api/party/detail/" + id;
+    }else{
+        contentURL = "./data/content.html #main";
+		detailURL = "./data/detail.txt";
+    }
 
 	var infoWindow,
 		map, 
@@ -18,7 +99,6 @@ $(function(){
 
 	$.getJSON(detailURL,function(data){
 		if(data.code ===1){
-			console.log(data);
 			var info = data.info,
 				party = info.party,
 			    actHTML = template("actTpl",party),
@@ -33,14 +113,18 @@ $(function(){
 			}else{
 				$good.hide();
 			}
-
 			if(party.commentCount > 0){
 				commentHTML = template('commentTpl', party);
 				$comment.html(commentHTML);
 			}else{
 				$comment.hide();
 			}
-
+            if(party.evaluationCount>0){
+                starHTML = template('starTpl', party);
+				$starBox.html(starHTML);
+            }else{
+                $starBox.hide();
+            }
 		    var mapData = {
 		    	type: "Marker", 
 			    name: "name", 
@@ -50,8 +134,7 @@ $(function(){
 			    offset: {x: -9, y: -31},
 			    lnglat: {lng: party.longitude, lat: party.latitude}
 		 	};
-
-			 map = new AMap.Map("mapContainer", {
+			map = new AMap.Map("mapContainer", {
 				center: new AMap.LngLat(mapData.lnglat.lng, mapData.lnglat.lat),
 				level: level,
 				keyboardEnable: false,
@@ -59,8 +142,6 @@ $(function(){
 				scrollWheel: false,
 				doubleClickZoom: false
 			});
-
-
 			var marker = new AMap.Marker({
 				map: map,
 				position: new AMap.LngLat(mapData.lnglat.lng, mapData.lnglat.lat),
@@ -69,10 +150,7 @@ $(function(){
 				offset: new AMap.Pixel(mapData.offset.x, mapData.offset.y), 
 				title: mapData.name,
 				content: '<div class="marker-con"><div class="icon icon-cir"></div><div class="shadow"></div></div>'
-				
 			});
-
-
 			if(!infoWindow){
 			   infoWindow = new AMap.InfoWindow({
 			   	isCustom:true,
@@ -82,9 +160,7 @@ $(function(){
 			   	size:new AMap.Size(300,0)
 			   }); 
 			}
-			  
 			infoWindow.open(map, marker.getPosition());
-
 			$price.html(party.priceRange)
 		}
 	});

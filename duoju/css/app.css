@@ -77,6 +77,13 @@ input[type="submit"],input[type="reset"],input[type="button"],input{-webkit-appe
     height: auto;
     margin: 8px 0;
 }
+.wrap{
+	max-width: 750px;
+	margin: 0 auto;
+}
+.wrap .main{
+	width: 100%;
+}
 body{
 	background-color: #f0eff5;
 		font-family: "Microsoft Yahei";
@@ -207,7 +214,7 @@ padding-bottom: 20px;
 	margin-bottom: 10px;
 }
 .bar-inner{
-	width:20%;
+	width:0%;
 	height:8px;
 	font-size: 20px;
 	border-radius: 3px;
@@ -245,7 +252,8 @@ padding-left: 15px;
 	font-size: 14px;
 	margin-left: 5px;
 }
-.icon-star{
+.icon-star,
+.icon-star2{
 	display:inline-block;
 	width:14px;
 	height:13px;
@@ -253,6 +261,10 @@ padding-left: 15px;
 	background-size: 100%;
 }
 
+.icon-star2{
+	background: url(../images/star@2x_1.png) no-repeat;
+		background-size: 100%;
+}
 
 .approval{
 	padding:20px 0;
@@ -327,6 +339,10 @@ padding-left: 15px;
 	padding-left: 50px;
 	border-bottom: 1px solid #dddddd;
 }
+.comment .comment-bd li:last-child{
+
+border:0;
+}
 .comment .comment-bd .uname{
 	color:#1caedf;
 	float:left;
@@ -354,6 +370,7 @@ padding-left: 15px;
 	line-height: 40px;
 	text-align: center;
 	color:#a6a6a6;
+    border-top:1px solid #ddd;
 	font-size:14px;
 }
 
@@ -470,5 +487,99 @@ padding-left: 15px;
   }
 }
 
+/* 评价 */
 
+.eval-top{
+	padding: 10px 10px;
+}
+.eval-top__total{
+	line-height: 30px;
+	margin-bottom: 10px;
 
+}
+.eval-top__total__title{
+	font-size: 16px;
+	color: #3c3c3c;
+	margin-right: 32px;
+}
+.eval-top__tags{
+width: 100%;
+}
+.eval-top__tags .tag{
+	border-radius: 2px;
+	padding: 5px;
+	text-align: center;
+	font-size: 12px;
+	line-height: 22px;
+	color: #f76868;
+	border:1px solid #f76868;
+	  white-space: nowrap;
+	  display: inline-block;
+	  margin-bottom: 5px;
+}
+
+.eval{
+
+}
+.eval-item{
+	position: relative;
+
+	margin: 0 10px 10px;
+		margin-left: 60px;
+		border-bottom: 1px solid #ddd;
+}
+
+.eval-item .eval-avatar{
+	position: absolute;
+	top: 0;
+	left: -50px;
+}
+.eval-item__extra{
+	margin-bottom: 10px;
+}
+.eval-item__username{
+	color: #3c3c3c;
+	line-height: 22px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+.eval-extra__time{
+	color: #a6a6a6;
+	margin-left: 130px;
+	  position: absolute;
+  right: 0;
+
+}
+.eval-item__content{
+	line-height: 22px;
+	margin-bottom: 5px;
+}
+
+.eval-item__img{
+	width: 100%;
+}
+.eval-item__img li{
+	width: 120px;
+	height: 120px;
+	margin-right: 2px;
+	float: left;
+	margin-bottom: 5px;
+}
+.eval-item__img li img{
+	width: 100%;
+}
+
+@media screen and (min-width: 360px) and (max-width: 800px){
+
+	.eval-item{
+		position: relative;
+		margin-left: 60px;
+	}
+
+	.eval-item__img li{
+		margin-right: 5px;
+		width: 90px;
+		height: 90px;
+	}
+}

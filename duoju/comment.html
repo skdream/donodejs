@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no, email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+	<!-- 启用360浏览器的极速模式(webkit) -->
+	<meta name="renderer" content="webkit">
+	<!-- 避免IE使用兼容模式 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+	<meta name="HandheldFriendly" content="true">
+	<!-- 微软的老式浏览器 -->
+	<meta name="MobileOptimized" content="320">
+	<!-- uc强制竖屏 -->
+	<meta name="screen-orientation" content="portrait">
+	<!-- QQ强制竖屏 -->
+	<meta name="x5-orientation" content="portrait">
+	<!-- UC强制全屏 -->
+	<meta name="full-screen" content="yes">
+	<!-- QQ强制全屏 -->
+	<meta name="x5-fullscreen" content="true">
+	<!-- UC应用模式 -->
+	<meta name="browsermode" content="application">
+	<!-- QQ应用模式 -->
+	<meta name="x5-page-mode" content="app">
+	<!-- windows phone 点击无高光 -->
+	<meta name="msapplication-tap-highlight" content="no">
+	<title>评论</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="skdream@126.com">
+	<link rel="stylesheet" type="text/css" href="./css/app.css">
+</head>
+<body>
+<div class="wrap">
+	<div id="main" class="main">
+
+
+	<div id="comment" class="comment">
+		 			
+			<div class="comment-bd" style="padding:50px;text-align:center">
+				
+				正在加载评论......
+				
+			</div> 
+		
+		</div>
+	</div>
+</div>
+
+<!-- 评论 -->
+<script id="commentTpl" type="text/html">
+	<div class="comment-bd">
+	    <ul>
+        <%for (var i=0;i<commentList.length;i++){ %>
+	         <li>
+	            <div class="comm-top">
+	                <span class="avatar">
+	                    <img src="<%= commentList[i].user.smallAvatar%>" alt="<%=commentList[i].user.username%>">
+	                </span>
+	                <span class="uname">
+	                    <%=commentList[i].user.username%>
+	                </span>
+	                <span class="time">
+	                    <%=dateFormat(commentList[i].addTime,11,5) %>
+	                </span>
+	            </div>
+	            <div class="comm-con">
+	                <%=commentList[i].content%>
+	            </div>
+	        </li>       
+	    <%}%>
+	    </ul>
+	    
+	</div>
+</script>
+<!-- <script type='text/javascript' src='./js/jquery.js'></script>
+<script type='text/javascript' src='./js/template-native.js'></script> -->
+
+
+<script type='text/javascript' src='./js/comment.js'></script>
+</body>
+</html>

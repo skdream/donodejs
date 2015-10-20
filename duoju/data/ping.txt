@@ -1,0 +1,241 @@
+// 20151020174535
+// http://jk.duoju.info/api/party/evaluation/list?partyId=108391&lastId=0
+
+{
+	"code" : 1,
+	"duration" : 8,
+	"info" : {
+		"avgStart" : 4.726027397260274,
+		"evaluationList" : [{
+				"addTime" : "2015-10-19 08:46:46",
+				"content" : "",
+				"id" : 309,
+				"isAnonymous" : 0,
+				"orderNo" : "1249365619",
+				"partyId" : 108391,
+				"pictureList" : [
+
+				],
+				"setId" : 8445,
+				"star" : 5,
+				"user" : {
+					"attendPartyNum" : 0,
+					"avatar" : "http://image.duoju.info/upload/2015/09/2922191125C869CEEB-6B8D-4C0D-9BBA-9C47FFE0F647",
+					"id" : 95619,
+					"middleAvatar" : "http://image.duoju.info/upload/2015/09/2922191125C869CEEB-6B8D-4C0D-9BBA-9C47FFE0F647?imageView2/1/w/200/h/200",
+					"orderPartyNum" : 0,
+					"smallAvatar" : "http://image.duoju.info/upload/2015/09/2922191125C869CEEB-6B8D-4C0D-9BBA-9C47FFE0F647?imageView2/1/w/100/h/100",
+					"username" : "柚子"
+				}
+			}, {
+				"addTime" : "2015-10-18 23:14:33",
+				"content" : "",
+				"id" : 308,
+				"isAnonymous" : 0,
+				"orderNo" : "1264237904",
+				"partyId" : 108391,
+				"pictureList" : [
+
+				],
+				"setId" : 8445,
+				"star" : 5,
+				"user" : {
+					"attendPartyNum" : 0,
+					"avatar" : "http://image.duoju.info/avatar/77904.jpg?t=1432654745932",
+					"id" : 77904,
+					"middleAvatar" : "http://image.duoju.info/avatar/77904.jpg?imageView2/1/w/200/h/200",
+					"orderPartyNum" : 0,
+					"smallAvatar" : "http://image.duoju.info/avatar/77904.jpg?imageView2/1/w/100/h/100",
+					"username" : "A+ "
+				}
+			}, {
+				"addTime" : "2015-10-18 23:08:23",
+				"content" : "",
+				"id" : 307,
+				"isAnonymous" : 0,
+				"orderNo" : "1175297356",
+				"partyId" : 108391,
+				"pictureList" : [
+
+				],
+				"setId" : 8445,
+				"star" : 5,
+				"user" : {
+					"attendPartyNum" : 0,
+					"avatar" : "http://image.duoju.info/upload/2015/09/2900195421D09D2A4A-3FD8-44A4-9816-AAC4BFA3042D",
+					"id" : 87356,
+					"middleAvatar" : "http://image.duoju.info/upload/2015/09/2900195421D09D2A4A-3FD8-44A4-9816-AAC4BFA3042D?imageView2/1/w/200/h/200",
+					"orderPartyNum" : 0,
+					"smallAvatar" : "http://image.duoju.info/upload/2015/09/2900195421D09D2A4A-3FD8-44A4-9816-AAC4BFA3042D?imageView2/1/w/100/h/100",
+					"username" : "浮沉丶隻影踏昆仑"
+				}
+			}, {
+				"addTime" : "2015-10-17 12:48:03",
+				"content" : "",
+				"id" : 306,
+				"isAnonymous" : 0,
+				"orderNo" : "1285630707",
+				"partyId" : 108391,
+				"pictureList" : [
+
+				],
+				"setId" : 8445,
+				"star" : 5,
+				"user" : {
+					"attendPartyNum" : 0,
+					"avatar" : "http://wx.qlogo.cn/mmopen/ajNVdqHZLLB12BLzCDxptg8cOna3prdxA0ZqKDcttx9FjMf590tqIkzArQ4hqyggyd2RlZWQEtrJ799fiboksBg/0",
+					"id" : 90707,
+					"middleAvatar" : "http://wx.qlogo.cn/mmopen/ajNVdqHZLLB12BLzCDxptg8cOna3prdxA0ZqKDcttx9FjMf590tqIkzArQ4hqyggyd2RlZWQEtrJ799fiboksBg/0?imageView2/1/w/200/h/200",
+					"orderPartyNum" : 0,
+					"smallAvatar" : "http://wx.qlogo.cn/mmopen/ajNVdqHZLLB12BLzCDxptg8cOna3prdxA0ZqKDcttx9FjMf590tqIkzArQ4hqyggyd2RlZWQEtrJ799fiboksBg/0?imageView2/1/w/100/h/100",
+					"username" : "潮"
+				}
+			}, {
+				"addTime" : "2015-10-17 09:32:00",
+				"content" : "",
+				"id" : 305,
+				"isAnonymous" : 0,
+				"orderNo" : "1285256847",
+				"partyId" : 108391,
+				"pictureList" : [
+
+				],
+				"setId" : 8445,
+				"star" : 5,
+				"user" : {
+					"attendPartyNum" : 0,
+					"avatar" : "http://wx.qlogo.cn/mmopen/Q3auHgzwzM5fbCD5jrsVFD0vTYuWw4jEZAic26d5zPKiaHianIBicQAWIXXlCSVibf6CY94ibqNM4MZY5DDde5EcEp3g/0",
+					"id" : 96847,
+					"middleAvatar" : "http://wx.qlogo.cn/mmopen/Q3auHgzwzM5fbCD5jrsVFD0vTYuWw4jEZAic26d5zPKiaHianIBicQAWIXXlCSVibf6CY94ibqNM4MZY5DDde5EcEp3g/0?imageView2/1/w/200/h/200",
+					"orderPartyNum" : 0,
+					"smallAvatar" : "http://wx.qlogo.cn/mmopen/Q3auHgzwzM5fbCD5jrsVFD0vTYuWw4jEZAic26d5zPKiaHianIBicQAWIXXlCSVibf6CY94ibqNM4MZY5DDde5EcEp3g/0?imageView2/1/w/100/h/100",
+					"username" : "沚枫"
+				}
+			}, {
+				"addTime" : "2015-10-17 07:13:13",
+				"content" : "好玩",
+				"id" : 304,
+				"isAnonymous" : 0,
+				"orderNo" : "1285319591",
+				"partyId" : 108391,
+				"pictureList" : [
+
+				],
+				"setId" : 8505,
+				"star" : 5,
+				"user" : {
+					"attendPartyNum" : 0,
+					"avatar" : "http://image.duoju.info/upload/2015/08/25095547697CE64EA2-0857-4619-B704-F4E9E8CB6886",
+					"id" : 89591,
+					"middleAvatar" : "http://image.duoju.info/upload/2015/08/25095547697CE64EA2-0857-4619-B704-F4E9E8CB6886?imageView2/1/w/200/h/200",
+					"orderPartyNum" : 0,
+					"smallAvatar" : "http://image.duoju.info/upload/2015/08/25095547697CE64EA2-0857-4619-B704-F4E9E8CB6886?imageView2/1/w/100/h/100",
+					"username" : "洋芋"
+				}
+			}, {
+				"addTime" : "2015-10-17 07:12:31",
+				"content" : "",
+				"id" : 303,
+				"isAnonymous" : 0,
+				"orderNo" : "1285349591",
+				"partyId" : 108391,
+				"pictureList" : [
+
+				],
+				"setId" : 8505,
+				"star" : 5,
+				"user" : {
+					"attendPartyNum" : 0,
+					"avatar" : "http://image.duoju.info/upload/2015/08/25095547697CE64EA2-0857-4619-B704-F4E9E8CB6886",
+					"id" : 89591,
+					"middleAvatar" : "http://image.duoju.info/upload/2015/08/25095547697CE64EA2-0857-4619-B704-F4E9E8CB6886?imageView2/1/w/200/h/200",
+					"orderPartyNum" : 0,
+					"smallAvatar" : "http://image.duoju.info/upload/2015/08/25095547697CE64EA2-0857-4619-B704-F4E9E8CB6886?imageView2/1/w/100/h/100",
+					"username" : "洋芋"
+				}
+			}, {
+				"addTime" : "2015-10-16 21:33:27",
+				"content" : "",
+				"id" : 302,
+				"isAnonymous" : 0,
+				"orderNo" : "1285787671",
+				"partyId" : 108391,
+				"pictureList" : [
+
+				],
+				"setId" : 8445,
+				"star" : 4,
+				"user" : {
+					"attendPartyNum" : 0,
+					"avatar" : "http://app.nacute.com/upload/default.png",
+					"id" : 97671,
+					"middleAvatar" : "http://app.nacute.com/upload/default.png?imageView2/1/w/200/h/200",
+					"orderPartyNum" : 0,
+					"smallAvatar" : "http://app.nacute.com/upload/default.png?imageView2/1/w/100/h/100",
+					"username" : "1***7164082"
+				}
+			}, {
+				"addTime" : "2015-10-16 13:20:40",
+				"content" : "",
+				"id" : 301,
+				"isAnonymous" : 0,
+				"orderNo" : "1283796240",
+				"partyId" : 108391,
+				"pictureList" : [
+
+				],
+				"setId" : 8445,
+				"star" : 5,
+				"user" : {
+					"attendPartyNum" : 0,
+					"avatar" : "http://wx.qlogo.cn/mmopen/Q3auHgzwzM7TpzQ7VsDc1JDNGiaMOW9ico1rkVyHLEGCyBsDM6ng4XB5iaADicGTrMgWdscBFialbica2hWEBJRlEgeQ/0",
+					"id" : 96240,
+					"middleAvatar" : "http://wx.qlogo.cn/mmopen/Q3auHgzwzM7TpzQ7VsDc1JDNGiaMOW9ico1rkVyHLEGCyBsDM6ng4XB5iaADicGTrMgWdscBFialbica2hWEBJRlEgeQ/0?imageView2/1/w/200/h/200",
+					"orderPartyNum" : 0,
+					"smallAvatar" : "http://wx.qlogo.cn/mmopen/Q3auHgzwzM7TpzQ7VsDc1JDNGiaMOW9ico1rkVyHLEGCyBsDM6ng4XB5iaADicGTrMgWdscBFialbica2hWEBJRlEgeQ/0?imageView2/1/w/100/h/100",
+					"username" : "狐狸松"
+				}
+			}, {
+				"addTime" : "2015-10-14 17:29:46",
+				"content" : "",
+				"id" : 289,
+				"isAnonymous" : 0,
+				"orderNo" : "1284176610",
+				"partyId" : 108391,
+				"pictureList" : [
+
+				],
+				"setId" : 8505,
+				"star" : 5,
+				"user" : {
+					"attendPartyNum" : 0,
+					"avatar" : "http://app.nacute.com/upload/default.png",
+					"id" : 96610,
+					"middleAvatar" : "http://app.nacute.com/upload/default.png?imageView2/1/w/200/h/200",
+					"orderPartyNum" : 0,
+					"smallAvatar" : "http://app.nacute.com/upload/default.png?imageView2/1/w/100/h/100",
+					"username" : "1***8750604"
+				}
+			}
+		],
+		"tagList" : [{
+				"count" : 40,
+				"id" : 1,
+				"name" : "气氛不错"
+			}, {
+				"count" : 30,
+				"id" : 2,
+				"name" : "环境不错"
+			}, {
+				"count" : 16,
+				"id" : 3,
+				"name" : "准时开始"
+			}, {
+				"count" : 5,
+				"id" : 4,
+				"name" : "交到朋友"
+			}
+		]
+	},
+	"msg" : "获取评价列表"
+}
