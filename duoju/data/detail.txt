@@ -9,7 +9,7 @@
 		"party" : {
 			"addTime" : "2015-09-09 14:31:36",
 			"approvalNum" : 25,
-			"approvalUserList" : [{ 
+			"approvalUserList" : [ { 
 					"audit" : 1,
 					"checkTime" : "2015-09-09 14:31:36",
 					"id" : 0,
@@ -26,7 +26,7 @@
 						"smallAvatar" : "http://image.duoju.info/avatar/69264.jpg?imageView2/1/w/100/h/100",
 						"username" : "蓝色骨头"
 					}
-				}, {
+				},{
 					"audit" : 1,
 					"checkTime" : "2015-09-14 18:04:22",
 					"id" : 0,
@@ -497,7 +497,20 @@
 						"smallAvatar" : "http://image.duoju.info/upload/2015/08/1121020911FD3FD144-A8A5-4C6A-9978-CE74B2A66F19?imageView2/1/w/100/h/100",
 						"username" : "炸天猪"
 					}
-				}, {
+				}, { 
+					"goodTime" : "2015-09-14 23:22:29",
+					"id" : 0,
+					"partyId" : 107343,
+					"user" : {
+						"attendPartyNum" : 0,
+						"avatar" : "http://image.duoju.info/upload/2015/08/1121020911FD3FD144-A8A5-4C6A-9978-CE74B2A66F19",
+						"id" : 66510,
+						"middleAvatar" : "http://image.duoju.info/upload/2015/08/1121020911FD3FD144-A8A5-4C6A-9978-CE74B2A66F19?imageView2/1/w/200/h/200",
+						"sex" : "1",
+						"smallAvatar" : "http://image.duoju.info/upload/2015/08/1121020911FD3FD144-A8A5-4C6A-9978-CE74B2A66F19?imageView2/1/w/100/h/100",
+						"username" : "炸天猪"
+					}
+				},{
 					"goodTime" : "2015-09-14 19:09:27",
 					"id" : 0,
 					"partyId" : 107343,

@@ -56,21 +56,21 @@
 <script id="commentTpl" type="text/html">
 	<div class="comment-bd">
 	    <ul>
-        <%for (var i=0;i<commentList.length;i++){ %>
+        <%for (var i=0;i<list.length;i++){ %>
 	         <li>
 	            <div class="comm-top">
 	                <span class="avatar">
-	                    <img src="<%= commentList[i].user.smallAvatar%>" alt="<%=commentList[i].user.username%>">
+	                    <img src="<%= list[i].user.smallAvatar%>" alt="<%=list[i].user.username%>">
 	                </span>
 	                <span class="uname">
-	                    <%=commentList[i].user.username%>
+	                    <%=list[i].user.username%>
 	                </span>
 	                <span class="time">
-	                    <%=dateFormat(commentList[i].addTime,11,5) %>
+	                    <%=dateFormat(list[i].addTime,11,5) %>
 	                </span>
 	            </div>
 	            <div class="comm-con">
-	                <%=commentList[i].content%>
+	                <%=list[i].content%>
 	            </div>
 	        </li>       
 	    <%}%>

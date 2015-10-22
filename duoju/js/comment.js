@@ -77,7 +77,7 @@ var util = {
 
 $(function(){
     
-	var id = util.getParam('id'),
+	var id = util.getParam('partyId'),
 		detailURL = "", // "http://jk.duoju.info/api/party/detail/" + id,
 		detailId = "",
         url = document.location.href,
@@ -85,25 +85,22 @@ $(function(){
         
     if(url.indexOf('duoju')>-1){
       
-		detailURL =  "http://jk.duoju.info/api/party/detail/" + id;
+		detailURL =  "http://jk.duoju.info/api/party/comment/list?partyId=" + id + "&lastId=3";
     }else{
      
-		detailURL = "./data/detail.txt";
+		detailURL = "./data/comment.txt";
     }
 
-	var infoWindow,
-		map, 
-		level = 14;
 
 	$.getJSON(detailURL,function(data){
 		if(data.code ===1){
 			var info = data.info,
-				party = info.party,
+				list = info.list,
 				commentHTML = "";
 
 			
-			if(party.commentCount > 0){
-				commentHTML = template('commentTpl', party);
+			if(list.length > 0){
+				commentHTML = template('commentTpl', info);
 				$comment.html(commentHTML);
 			}
 		}

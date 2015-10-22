@@ -82,7 +82,8 @@ $(function(){
 		$good = $('#good'),
 		$act   = $('#act'),
         $starBox = $('#starBox'),
-		$price = $('#price');
+		$price = $('#price'),
+		$Jcover = $('#Jcover');
         
     if(url.indexOf('duoju')>-1){
         contentURL = "http://jk.duoju.info/api/page/party/content/" + id +"#main";
@@ -105,6 +106,8 @@ $(function(){
 				commentHTML = "",
 				goodHTML = "";
 
+			var coverStr = '<img src="'+ party.cover +'"><h3>'+ party.name +'</h3>';
+			$Jcover.html(coverStr);
 			$act.html(actHTML);
 
 			if(party.goodCount>0){
@@ -156,7 +159,7 @@ $(function(){
 			   	isCustom:true,
 			   	autoMove: true,
 			   	content:'<div class="place">'+ party.place+'</div>',
-			   	offset: new AMap.Pixel(-10,80),
+			   	offset: new AMap.Pixel(-12,70),
 			   	size:new AMap.Size(300,0)
 			   }); 
 			}

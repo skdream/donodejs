@@ -38,6 +38,9 @@
 <body>
 <div class="wrap">
 	<div id="main" class="main">
+		<div id="Jcover" class="cover">
+			
+		</div>
 		<div id="article" class="article">
 			
 		</div>
@@ -326,7 +329,7 @@
 		</div>
 	</div>
 	<div class="join-right">
-		<a href="#">查看参与用户</a>
+		<span>查看参与用户</span>
 	</div>
 	</div>
 </script>
@@ -358,11 +361,20 @@
 		</div>
 	</div>
 	<div class="approval-bottom">
-		<% for(var i=0;i< goodUserList.length;i ++ ){ %>
-		<span class="avatar">
-			<img src="<%=goodUserList[i].user.smallAvatar%>" alt="<%=goodUserList[i].user.username%>">
-		</span>
-		<%}%>
+		<% for(var i=0;i< goodUserList.length;i ++ ){ 
+			if(i<9){ %>
+				<span class="avatar">
+					<img src="<%=goodUserList[i].user.smallAvatar%>" alt="<%=goodUserList[i].user.username%>">
+				</span>
+			<% }else if(i==9){ %>
+				<span class="avatar">
+					<img src="./images/more_avatar.png">
+				</span>
+		<%
+			}else{
+				return false;
+			}
+		}%>
 
 	</div>
 </script>
@@ -392,7 +404,10 @@
 	        </li>       
 	    <%}%>
 	    </ul>
-	    <a class="comm-more" href="./comment.html?id=<%= id%>">查看更多评论</a>
+        <%if(commentCount>3){%>
+        <a class="comm-more" href="./comment.html?partyId=<%= id%>&lastId=<%= commentList[2].id%>">查看更多评论</a>
+        <%}%>
+	    
 	</div>
 </script>
 <!-- <script type='text/javascript' src='./js/jquery.js'></script> -->

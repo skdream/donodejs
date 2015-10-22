@@ -1,0 +1,238 @@
+{
+  "code": 1,
+  "duration": 50,
+  "info": {
+    "list": [
+      {
+        "addTime": "2015-09-15 12:37:15",
+        "content": "感兴趣",
+        "id": 40807,
+        "partyId": 107343,
+        "targetId": 0,
+        "user": {
+          "attendPartyNum": 0,
+          "avatar": "http://image.duoju.info/upload/2015/08/28/16060034fd6409fd-98fc-426c-afc2-d9762d9a0ff2",
+          "id": 69304,
+          "middleAvatar": "http://image.duoju.info/upload/2015/08/28/16060034fd6409fd-98fc-426c-afc2-d9762d9a0ff2?imageView2/1/w/200/h/200",
+          "orderPartyNum": 0,
+          "smallAvatar": "http://image.duoju.info/upload/2015/08/28/16060034fd6409fd-98fc-426c-afc2-d9762d9a0ff2?imageView2/1/w/100/h/100",
+          "username": "SoSo"
+        }
+      },
+      {
+        "addTime": "2015-09-15 12:37:15",
+        "content": "不错",
+        "id": 40806,
+        "partyId": 107343,
+        "targetId": 0,
+        "user": {
+          "attendPartyNum": 0,
+          "avatar": "http://image.duoju.info/avatar/67862.jpg",
+          "id": 67862,
+          "middleAvatar": "http://image.duoju.info/avatar/67862.jpg?imageView2/1/w/200/h/200",
+          "orderPartyNum": 0,
+          "smallAvatar": "http://image.duoju.info/avatar/67862.jpg?imageView2/1/w/100/h/100",
+          "username": "管不住嘴的哑巴"
+        }
+      },
+      {
+        "addTime": "2015-09-15 12:37:15",
+        "content": "还行",
+        "id": 40805,
+        "partyId": 107343,
+        "targetId": 0,
+        "user": {
+          "attendPartyNum": 0,
+          "avatar": "http://image.duoju.info/avatar/67861.jpg",
+          "id": 67861,
+          "middleAvatar": "http://image.duoju.info/avatar/67861.jpg?imageView2/1/w/200/h/200",
+          "orderPartyNum": 0,
+          "smallAvatar": "http://image.duoju.info/avatar/67861.jpg?imageView2/1/w/100/h/100",
+          "username": "仪表堂堂不是装"
+        }
+      },
+      {
+        "addTime": "2015-09-15 12:37:15",
+        "content": "韩剧啊",
+        "id": 40804,
+        "partyId": 107343,
+        "targetId": 0,
+        "user": {
+          "attendPartyNum": 0,
+          "avatar": "http://image.duoju.info/avatar/67938.jpg",
+          "id": 67938,
+          "middleAvatar": "http://image.duoju.info/avatar/67938.jpg?imageView2/1/w/200/h/200",
+          "orderPartyNum": 0,
+          "smallAvatar": "http://image.duoju.info/avatar/67938.jpg?imageView2/1/w/100/h/100",
+          "username": "费曼。木木哒"
+        }
+      },
+      {
+        "addTime": "2015-09-15 12:37:15",
+        "content": "从没看过韩国的戏剧",
+        "id": 40803,
+        "partyId": 107343,
+        "targetId": 0,
+        "user": {
+          "attendPartyNum": 0,
+          "avatar": "http://image.duoju.info/upload/2015/09/10/15390129f87d0dcd-7ba3-47c0-8b02-d537e1191328",
+          "id": 85230,
+          "middleAvatar": "http://image.duoju.info/upload/2015/09/10/15390129f87d0dcd-7ba3-47c0-8b02-d537e1191328?imageView2/1/w/200/h/200",
+          "orderPartyNum": 0,
+          "smallAvatar": "http://image.duoju.info/upload/2015/09/10/15390129f87d0dcd-7ba3-47c0-8b02-d537e1191328?imageView2/1/w/100/h/100",
+          "username": "151"
+        }
+      },
+      {
+        "addTime": "2015-09-14 10:29:53",
+        "content": "是韩语吗？",
+        "id": 39911,
+        "partyId": 107343,
+        "targetId": 0,
+        "user": {
+          "attendPartyNum": 0,
+          "avatar": "http://image.duoju.info/avatar/67848.jpg",
+          "id": 67848,
+          "middleAvatar": "http://image.duoju.info/avatar/67848.jpg?imageView2/1/w/200/h/200",
+          "orderPartyNum": 0,
+          "smallAvatar": "http://image.duoju.info/avatar/67848.jpg?imageView2/1/w/100/h/100",
+          "username": "我会说嗯哼"
+        }
+      },
+      {
+        "addTime": "2015-09-14 10:23:57",
+        "content": "朋友想去我也跟着一块乐呵",
+        "id": 39897,
+        "partyId": 107343,
+        "targetId": 0,
+        "user": {
+          "attendPartyNum": 0,
+          "avatar": "http://image.duoju.info/avatar/67849.jpg",
+          "id": 67849,
+          "middleAvatar": "http://image.duoju.info/avatar/67849.jpg?imageView2/1/w/200/h/200",
+          "orderPartyNum": 0,
+          "smallAvatar": "http://image.duoju.info/avatar/67849.jpg?imageView2/1/w/100/h/100",
+          "username": "霍霍妞儿"
+        }
+      },
+      {
+        "addTime": "2015-09-14 10:07:05",
+        "content": "棒子国的在影视戏剧方面还是很不错的，去看看",
+        "id": 39806,
+        "partyId": 107343,
+        "targetId": 0,
+        "user": {
+          "attendPartyNum": 0,
+          "avatar": "http://image.duoju.info/avatar/67841.jpg",
+          "id": 67841,
+          "middleAvatar": "http://image.duoju.info/avatar/67841.jpg?imageView2/1/w/200/h/200",
+          "orderPartyNum": 0,
+          "smallAvatar": "http://image.duoju.info/avatar/67841.jpg?imageView2/1/w/100/h/100",
+          "username": "ANNY宝贝"
+        }
+      },
+      {
+        "addTime": "2015-09-14 10:01:16",
+        "content": "感觉很不错的样子",
+        "id": 39769,
+        "partyId": 107343,
+        "targetId": 0,
+        "user": {
+          "attendPartyNum": 0,
+          "avatar": "http://image.duoju.info/avatar/67849.jpg",
+          "id": 67849,
+          "middleAvatar": "http://image.duoju.info/avatar/67849.jpg?imageView2/1/w/200/h/200",
+          "orderPartyNum": 0,
+          "smallAvatar": "http://image.duoju.info/avatar/67849.jpg?imageView2/1/w/100/h/100",
+          "username": "霍霍妞儿"
+        }
+      },
+      {
+        "addTime": "2015-09-14 09:59:19",
+        "content": "走起",
+        "id": 39754,
+        "partyId": 107343,
+        "targetId": 0,
+        "user": {
+          "attendPartyNum": 0,
+          "avatar": "http://image.duoju.info/avatar/67848.jpg",
+          "id": 67848,
+          "middleAvatar": "http://image.duoju.info/avatar/67848.jpg?imageView2/1/w/200/h/200",
+          "orderPartyNum": 0,
+          "smallAvatar": "http://image.duoju.info/avatar/67848.jpg?imageView2/1/w/100/h/100",
+          "username": "我会说嗯哼"
+        }
+      },
+      {
+        "addTime": "2015-09-14 09:51:28",
+        "content": "带上我",
+        "id": 39712,
+        "partyId": 107343,
+        "targetId": 0,
+        "user": {
+          "attendPartyNum": 0,
+          "avatar": "http://image.duoju.info/avatar/67922.jpg?t=1426680672750",
+          "id": 67922,
+          "middleAvatar": "http://image.duoju.info/avatar/67922.jpg?imageView2/1/w/200/h/200",
+          "orderPartyNum": 0,
+          "smallAvatar": "http://image.duoju.info/avatar/67922.jpg?imageView2/1/w/100/h/100",
+          "username": "王家卫"
+        }
+      },
+      {
+        "addTime": "2015-09-14 09:49:08",
+        "content": "很好看吗",
+        "id": 39698,
+        "partyId": 107343,
+        "targetId": 39695,
+        "targetUser": {
+          "attendPartyNum": 0,
+          "id": 67921,
+          "orderPartyNum": 0,
+          "username": "我是大眼萌"
+        },
+        "user": {
+          "attendPartyNum": 0,
+          "avatar": "http://image.duoju.info/avatar/67923.jpg?t=1426680900065",
+          "id": 67923,
+          "middleAvatar": "http://image.duoju.info/avatar/67923.jpg?imageView2/1/w/200/h/200",
+          "orderPartyNum": 0,
+          "smallAvatar": "http://image.duoju.info/avatar/67923.jpg?imageView2/1/w/100/h/100",
+          "username": "esse"
+        }
+      },
+      {
+        "addTime": "2015-09-14 09:48:37",
+        "content": "我也想看看",
+        "id": 39695,
+        "partyId": 107343,
+        "targetId": 0,
+        "user": {
+          "attendPartyNum": 0,
+          "avatar": "http://image.duoju.info/avatar/67921.jpg?t=1426680783848",
+          "id": 67921,
+          "middleAvatar": "http://image.duoju.info/avatar/67921.jpg?imageView2/1/w/200/h/200",
+          "orderPartyNum": 0,
+          "smallAvatar": "http://image.duoju.info/avatar/67921.jpg?imageView2/1/w/100/h/100",
+          "username": "我是大眼萌"
+        }
+      },
+      {
+        "addTime": "2015-09-14 09:48:28",
+        "content": "想去看看～",
+        "id": 39694,
+        "partyId": 107343,
+        "targetId": 0,
+        "user": {
+          "attendPartyNum": 0,
+          "avatar": "http://image.duoju.info/avatar/67845.jpg",
+          "id": 67845,
+          "middleAvatar": "http://image.duoju.info/avatar/67845.jpg?imageView2/1/w/200/h/200",
+          "orderPartyNum": 0,
+          "smallAvatar": "http://image.duoju.info/avatar/67845.jpg?imageView2/1/w/100/h/100",
+          "username": "不会蛙跳的少年"
+        }
+      }
+    ]
+  }
+}
