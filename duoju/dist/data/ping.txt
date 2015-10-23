@@ -1,6 +1,3 @@
-// 20151020174535
-// http://jk.duoju.info/api/party/evaluation/list?partyId=108391&lastId=0
-
 {
 	"code" : 1,
 	"duration" : 8,
