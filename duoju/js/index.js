@@ -124,7 +124,7 @@ $(function(){
         
 		detailURL =  "http://jk.duoju.info/api/party/detail/" + id;
 
-        contentURL = "http://jk.duoju.info/api/page/party/content/" + id;
+      //  contentURL = "http://jk.duoju.info/api/page/party/content/?partyId=" + id;
 
 	var infoWindow,
 		map, 
@@ -132,17 +132,17 @@ $(function(){
 
 
 	// $('#article').load(contentURL);
-
+/*
 	$.ajax({
 		url: contentURL,
 		type: 'get',
 		dataType: 'jsonp',
 		jsonp:'callback',
 		success:function(data){
-			$('#article').html(data);
+			$('#article').html(data.info.party.content);
 		}
 	})
-
+*/
 
 	$.ajax({
 		url: detailURL,
@@ -161,6 +161,8 @@ $(function(){
 				var coverStr = '<img src="'+ party.cover +'"><h3>'+ party.name +'</h3>';
 				$Jcover.html(coverStr);
 				$act.html(actHTML);
+
+				$('#article').html(party.content);
 
 				if(party.goodCount>0){
 					goodHTML= template("goodTpl",party);

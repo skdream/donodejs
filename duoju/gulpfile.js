@@ -4,8 +4,11 @@ var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var shrink = require('gulp-cssshrink');
-var imagemin = require('imagemin');
 var minifyHTML = require('gulp-minify-html');
+var Imagemin = require('imagemin');
+var sass = require('gulp-sass');
+var clean = require('gulp-clean');
+
 
 // 静态文件打包合并
 var webpack = require('gulp-webpack');
@@ -19,14 +22,12 @@ var runSequence = require('run-sequence');
 
 var config = require('./webpack.config');
 
-/*gulp.task('js', function () {
-  gulp.src('./js')
-    .pipe(webpack(config))
-    .pipe(gulp.dest('./build'));
-});
 
 
-*/
+
+
+
+
 
 gulp.task('js', function () {
   return gulp.src(['./js/*.js'])
@@ -39,19 +40,9 @@ gulp.task('js', function () {
     .pipe(gulp.dest('./dist/rev/js'));
 });
 
-/*
-gulp.task('jsall', function () {
-  return gulp.src(['./js/*.js'])
-    .pipe(uglify())
-    .pipe(rev())
-    .pipe(gulp.dest('./dist/js/'))
-    .pipe(rev.manifest())
-    .pipe(gulp.dest('./dist/rev/js'));
-});
-*/
 
 
-var Imagemin = require('imagemin');
+
 
 gulp.task('image', function () {
   new Imagemin()
@@ -66,6 +57,10 @@ gulp.task('image', function () {
 });
 
 
+gulp.task('clean', function () {
+    return gulp.src('./dist', {read: false})
+        .pipe(clean());
+});
 
 
 
@@ -107,8 +102,5 @@ gulp.task('html', function () {
 });
 
 gulp.task('publish', function (callback) {
-  runSequence(
-    ['css', 'js','data','image'],
-    'html',
-    callback);
+  runSequence( ['css', 'js','data','image'],  'html',  callback);
 });

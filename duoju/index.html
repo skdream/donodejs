@@ -366,15 +366,13 @@
 				<span class="avatar">
 					<img src="<%=goodUserList[i].user.smallAvatar%>" alt="<%=goodUserList[i].user.username%>">
 				</span>
-			<% }else if(i==9){ %>
+			<% } }%>
+
+			<%if(goodCount>9){ %>
 				<span class="avatar">
 					<img src="./images/more_avatar.png">
 				</span>
-		<%
-			}else{
-				return false;
-			}
-		}%>
+		<%}%>
 
 	</div>
 </script>
@@ -405,7 +403,7 @@
 	    <%}%>
 	    </ul>
         <%if(commentCount>3){%>
-        <a class="comm-more" href="./comment.html?partyId=<%= id%>&lastId=<%= commentList[2].id%>">查看更多评论</a>
+        <a class="comm-more" href="./comment.html?partyId=<%= id%>">查看更多评论</a>
         <%}%>
 	    
 	</div>

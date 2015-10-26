@@ -78,12 +78,11 @@ var util = {
 $(function(){
     
 	var id = util.getParam('partyId'),
-		detailURL = "", // "http://jk.duoju.info/api/party/detail/" + id,
-		detailId = "",
-        url = document.location.href,
+        lastId = util.getParam('lastId'),
+
 		$comment = $('#comment');
       
-		detailURL =  "http://jk.duoju.info/api/party/comment/list?partyId=" + id + "&lastId=3";
+		detailURL =  "http://jk.duoju.info/api/party/comment/list?partyId=" + id + "&lastId=" + lastId;
 
 	$.ajax({
         url: detailURL,
@@ -98,7 +97,9 @@ $(function(){
     			if(list.length > 0){
     				commentHTML = template('commentTpl', info);
     				$comment.html(commentHTML);
-    			}
+    			}else{
+                    $comment.html('<div class="comment-bd" style="padding:50px;text-align:center"> 暂无评论...... </div> ');
+                }
     		}
         }
 	});
