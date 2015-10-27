@@ -416,14 +416,12 @@ border:0;
 
 
 
-#scroller{
-	margin-top: -55px;
-}
+
 
 .container{
 	position: absolute;
-	top:0;
-	bottom: 0;
+	top: 34px;
+	bottom: 40px;
 	left: 0;
 	right: 0;
 	overflow-y: auto;

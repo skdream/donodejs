@@ -162,6 +162,7 @@ $(function(){
 				$Jcover.html(coverStr);
 				$act.html(actHTML);
 
+				document.title = party.name;
 				$('#article').html(party.content);
 
 				if(party.goodCount>0){

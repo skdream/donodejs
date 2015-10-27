@@ -37,27 +37,48 @@
 </head>
 <body>
 <div class="wrap">
-	<div id="main" class="main">
 
 
-	<div id="comment" class="comment">
+	<section id="wrapper" class="container">
+		<div id="scroller" class="wrap comment">
+			<div class="pulldown">
+	          <span class="icon"></span><span class="label">下拉刷新...</span>
+	        </div>
+			<ul id="commentList" class="comment-bd">
+
+			</ul>
+			<div class="pullup">
+	          <span class="icon"></span><span class="label">上拉刷新...</span>
+	        </div>
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+
+<!-- 	<div id="main" class="main commentMain">
+		<div id="comment" class="comment commen-page">
 		 			
 			<div class="comment-bd" style="padding:50px;text-align:center">
 				
 				正在加载评论......
-				
+
 			</div> 
 		
 		</div>
-	</div>
+	</div> -->
 </div>
 
 <!-- 评论 -->
 <script id="commentTpl" type="text/html">
-	<div class="comment-bd">
-	    <ul>
+
         <%for (var i=0;i<list.length;i++){ %>
-	         <li>
+	         <li class="item">
 	            <div class="comm-top">
 	                <span class="avatar">
 	                    <img src="<%= list[i].user.smallAvatar%>" alt="<%=list[i].user.username%>">
@@ -74,9 +95,6 @@
 	            </div>
 	        </li>       
 	    <%}%>
-	    </ul>
-	    
-	</div>
 </script>
 <!-- <script type='text/javascript' src='./js/jquery.js'></script>
 <script type='text/javascript' src='./js/template-native.js'></script> -->

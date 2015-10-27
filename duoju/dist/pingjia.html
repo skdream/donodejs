@@ -1,1 +1,112 @@
-<!DOCTYPE HTML><html lang=zh-cmn-Hans><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black><meta name=format-detection content="telephone=no, email=no"><meta name=apple-mobile-web-app-capable content=yes><meta name=renderer content=webkit><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=HandheldFriendly content=true><meta name=MobileOptimized content=320><meta name=screen-orientation content=portrait><meta name=x5-orientation content=portrait><meta name=full-screen content=yes><meta name=x5-fullscreen content=true><meta name=browsermode content=application><meta name=x5-page-mode content=app><meta name=msapplication-tap-highlight content=no><title>评价</title><meta name=keywords content=""><meta name=description content=""><meta name=author content=skdream@126.com><link rel=stylesheet type=text/css href=./css/app-fb930f80.css></head><body><div class=wrap><div id=main class=main><div id=evalTop class=eval-top></div><div id=evaluationList class=eval></div></div></div><script id=evalTpl type=text/html><div class="eval-top__total"> <span class="eval-total__title">总评：</span> <span class="eval-total__content"> <% for(i=0;i<5;i++){ if(i<avgStart){ %> <i class="icon-star"></i> <% }else{ %> <i class="icon-star2"></i> <% }} %> </span> </div> <div class="eval-top__tags"> <% for(j=0;j<tagList.length;j++){%> <span class="tag"><%= tagList[j].name%><%= tagList[j].count%></span> <% }%> </div></script><script id=evaluationListTpl type=text/html><% for (var i = evaluationList.length - 1; i >= 0; i--) { %> <div class="eval-item"> <span class="avatar eval-avatar"><img src="<%= evaluationList[i].user.smallAvatar %>" alt="<%= evaluationList[i].user.username %>"></span> <h4 class="eval-item__username"><%= evaluationList[i].user.username %></h4> <div class="eval-item__extra"> <span class="eval-extra__star"> <% for(j=0;j<5;j++){ if( j< evaluationList[i].star ){ %> <i class="icon-star"></i> <% }else{ %> <i class="icon-star2"></i> <% }} %> </span> <span class="eval-extra__time"> <%= dateFormat(evaluationList[i].addTime,0,10 )%> </span> </div> <p class="eval-item__content"> <%= evaluationList[i].content %> </p> <div class="eval-item__img clearfix"> <ul> <% for (var k = evaluationList[i].pictureList.length - 1; k >= 0; k--) { %> <li><img src="<%= evaluationList[i].pictureList[k] %>" alt=""></li> <% } %> </ul> </div> </div> <% } %></script><script type=text/javascript src=./js/pingjia-e58d0555.js></script></body></html>
+<!DOCTYPE HTML>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no, email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+	<!-- 启用360浏览器的极速模式(webkit) -->
+	<meta name="renderer" content="webkit">
+	<!-- 避免IE使用兼容模式 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+	<meta name="HandheldFriendly" content="true">
+	<!-- 微软的老式浏览器 -->
+	<meta name="MobileOptimized" content="320">
+	<!-- uc强制竖屏 -->
+	<meta name="screen-orientation" content="portrait">
+	<!-- QQ强制竖屏 -->
+	<meta name="x5-orientation" content="portrait">
+	<!-- UC强制全屏 -->
+	<meta name="full-screen" content="yes">
+	<!-- QQ强制全屏 -->
+	<meta name="x5-fullscreen" content="true">
+	<!-- UC应用模式 -->
+	<meta name="browsermode" content="application">
+	<!-- QQ应用模式 -->
+	<meta name="x5-page-mode" content="app">
+	<!-- windows phone 点击无高光 -->
+	<meta name="msapplication-tap-highlight" content="no">
+	<title>评价</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="skdream@126.com">
+	<link rel="stylesheet" type="text/css" href="./css/app-5f7ff13c.css">
+</head>
+<body>
+<div class="wrap">
+	<div id="main" class="main">
+		<div id="evalTop" class="eval-top">
+		</div>
+		<div id="evaluationList" class="eval">
+		</div>
+	</div>
+</div>
+
+<!-- 总评 -->
+<script id="evalTpl" type="text/html">
+		<div class="eval-top__total">
+			<span class="eval-total__title">总评：</span>
+			<span class="eval-total__content">
+
+			<% for(i=0;i<5;i++){ 
+				if(i<avgStart){ %>
+					<i class="icon-star"></i>
+				<% }else{ %>
+					<i class="icon-star2"></i>
+			<% }} %>
+			</span>
+		</div>
+		<div class="eval-top__tags">
+
+			<% for(j=0;j<tagList.length;j++){%>
+				<span class="tag"><%= tagList[j].name%><%= tagList[j].count%></span>
+			<% }%>
+		</div>
+</script>
+
+<script id="evaluationListTpl" type="text/html">
+
+	<% for (var i = evaluationList.length - 1; i >= 0; i--) { %>
+		<div class="eval-item">
+		<span class="avatar eval-avatar"><img src="<%= evaluationList[i].user.smallAvatar %>" alt="<%= evaluationList[i].user.username %>"></span>
+		<h4 class="eval-item__username"><%= evaluationList[i].user.username %></h4>
+		<div class="eval-item__extra">
+			<span class="eval-extra__star">	
+
+			<% for(j=0;j<5;j++){ 
+				if( j< evaluationList[i].star ){ %>
+					<i class="icon-star"></i>
+				<% }else{ %>
+					<i class="icon-star2"></i>
+			<% }} %>
+			</span>
+			<span class="eval-extra__time">
+				<%= dateFormat(evaluationList[i].addTime,0,10 )%>
+			</span>
+		</div>
+		<p class="eval-item__content">
+			<%= evaluationList[i].content %>
+		</p>
+		<div class="eval-item__img clearfix">
+			<ul>
+				<% for (var k = evaluationList[i].pictureList.length - 1; k >= 0; k--) { %>
+
+					<li><img src="<%= evaluationList[i].pictureList[k] %>" alt=""></li>
+					
+				<% } %>
+
+			</ul>
+		</div>
+	</div>
+
+<% } %>
+</script>
+<!-- <script type='text/javascript' src='./js/jquery.js'></script>
+<script type='text/javascript' src='./js/template-native.js'></script> -->
+<!-- http://jk.duoju.info/api/party/evaluation/list?partyId=108391&lastId=0 -->
+<script type='text/javascript' src='./js/pingjia-83d0bfc9.js'></script>
+</body>
+</html>

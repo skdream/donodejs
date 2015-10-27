@@ -87,10 +87,10 @@ gulp.task('watch', function () {
 });
 gulp.task('html', function () {
   return gulp.src(['./dist/rev/**/*.json', './index.html','./comment.html','./pingjia.html'])
-    .pipe( minifyHTML({
-                empty:true,
-                spare:true
-            }) )
+    // .pipe( minifyHTML({
+    //             empty:true,
+    //             spare:true
+    //         }) )
     .pipe(revCollector({
       dirReplacements: {
         'css':'css',

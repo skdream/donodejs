@@ -370,7 +370,6 @@ padding-left: 15px;
 	margin-top: 5px;
 }
 .comment .comment-bd li{
-		box-sizing:border-box;
 	width: 100%;
 	padding:10px 0;
 	padding-left: 50px;
@@ -411,19 +410,29 @@ border:0;
 	font-size:14px;
 }
 
-
-
-
-
-
-#scroller{
-	margin-top: -55px;
+.commen-page {
+	  width: 100%;
 }
+
+
+.commen-page  .comment-bd li{
+	width: 100%;
+	padding:10px 0;
+	box-sizing:border-box;
+	padding-left: 50px;
+	border-bottom: 1px solid #dddddd;
+}
+
+
+
+
+
+
 
 .container{
 	position: absolute;
-	top:0;
-	bottom: 0;
+	top: 34px;
+	bottom: 40px;
 	left: 0;
 	right: 0;
 	overflow-y: auto;
@@ -432,9 +441,8 @@ border:0;
 	padding:0 10px;
 }
 .item{
-	padding: 10px 0;
-  padding-left: 50px;
-  border-bottom: 1px solid #ddd;
+	height: 40px;
+	line-height: 40px;
 	border-bottom: 1px dashed #999;
 }
 .item:last-child{
