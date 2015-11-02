@@ -412,13 +412,19 @@ border:0;
 }
 
 
-
-
-
-
-#scroller{
-	margin-top: -55px;
+.load-more{
+	display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #a6a6a6;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
 }
+
+
+
+
 
 .container{
 	position: absolute;
