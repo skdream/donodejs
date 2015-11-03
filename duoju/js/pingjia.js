@@ -31,7 +31,7 @@ $(function(){
         $evalTop = $('#evalTop'),
         $evaluationList = $("#evaluationList");
       
-        detailURL =  " http://jk.duoju.info/api/party/evaluation/list?partyId=" + id + "+&lastId=0";
+        detailURL =  " http://jk.duoju.info/api/party/evaluation/list?partyId=" + id + "&lastId=0";
 
     var infoWindow,
         map, 
@@ -42,6 +42,7 @@ $(function(){
         type: 'get',
         dataType: 'jsonp',
         jsonp:'callback',
+        crossDomain: true,
         success:function(data){
             if(data.code ===1){
                 var info = data.info,

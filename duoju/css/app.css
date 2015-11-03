@@ -73,6 +73,8 @@ input[type="submit"],input[type="reset"],input[type="button"],input{-webkit-appe
 
 .cover{
 	position: relative;
+	height: 210px;
+	background-size:cover
 }
 .cover img{
 	display: block;
@@ -82,14 +84,17 @@ input[type="submit"],input[type="reset"],input[type="button"],input{-webkit-appe
 	position: absolute;
 	bottom: 0;
 	left: 0px;
-	  color: #fff;
-	  height: 30px;
-	  line-height: 30px;
-	  font-size: 20px;
-	  width: 100%;
-	  background-color: rgba(0,0,0,.6);
-	  padding-left: 10px;
-	  box-sizing: border-box;
+	color: #fff;
+	height: 30px;
+	line-height: 30px;
+	font-size: 20px;
+	width: 100%;
+	padding-left: 10px;
+	box-sizing: border-box;
+	background: linear-gradient(bottom, rgba(0,0,0,0.6), rgba(0,0,0,0));
+	background: -moz-linear-gradient(bottom, rgba(0,0,0,0.6), rgba(0,0,0,0));
+	background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.6), rgba(0,0,0,0));
+	background: -o-linear-gradient(bottom, rgba(0,0,0,0.6), rgba(0,0,0,0));
 }
 
 .article img {
@@ -524,7 +529,7 @@ border:0;
 .map-box .icon-cir {height: 23px; width: 23px; }
 .map-box .place{
 	border: 1px solid #ddd;
-	padding: 15px 10px;
+	padding: 15px 35px 10px 10px;
     font-size:14px;
     background:url(../images/arrow.gif) scroll no-repeat 300px center #fff;
     background-size:12px;
@@ -631,6 +636,7 @@ width: 100%;
 	margin-right: 2px;
 	float: left;
 	margin-bottom: 5px;
+	overflow: hidden;
 }
 .eval-item__img li img{
 	width: 100%;
@@ -647,5 +653,6 @@ width: 100%;
 		margin-right: 5px;
 		width: 90px;
 		height: 90px;
+		overflow: hidden;
 	}
 }

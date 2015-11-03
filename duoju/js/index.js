@@ -158,7 +158,9 @@ $(function(){
 					commentHTML = "",
 					goodHTML = "";
 
-				var coverStr = '<img src="'+ party.cover +'"><h3>'+ party.name +'</h3>';
+				var coverStr = '<h3>'+ party.name +'</h3>';
+
+				$Jcover.css({'background-image':'url('+party.cover+')'})
 				$Jcover.html(coverStr);
 				$act.html(actHTML);
 
