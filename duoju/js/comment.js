@@ -1,3 +1,5 @@
+
+
 var $ = require('./jquery');
 var template = require('./template-native');
 var IScroll = require('./iscroll-probe');
@@ -18,7 +20,7 @@ var IScroll = require('./iscroll-probe');
  *     q:季度(1-4)
  * @return String
  * @author yanis.wang
- * @see	http://yaniswang.com/frontend/2013/02/16/dateformat-performance/
+ * @see http://yaniswang.com/frontend/2013/02/16/dateformat-performance/
  */
 
 /*template.helper('dateFormat', function (mdate, format) {
@@ -75,66 +77,11 @@ var util = {
     }
 }
 
-
-
-
-    var myScroll=null;
-        id = util.getParam('partyId'),
+    var id = util.getParam('partyId'),
         lastId = util.getParam('lastId'),
         detailURL =  "http://jk.duoju.info/api/party/comment/list?partyId=" + id + "&lastId=" + lastId;
 
-    function loaded(){
-        myScroll = new IScroll('#wrapper',{
-            probeType: 1,  //该值用于监听 scroll 事件，表示敏感程度 分别为 1,2,3级，最高3级，只有设置了 该值，scroll 事件才起作用 并且引用的是 iscroll-probe.js
-            tap: 'myCustomTapEvent',//绑定自定义事件
-            scrollbars: true,  // 设置为true时，开始对滚动条进行设置
-            fadeScrollbars : true, //
-            //snap: 'li'
-            //startY : -50 //利用布局实现偏移
-        });
-
-        myScroll.on('scroll',function(){
-            console.log('move');
-            console.log('y:',this.y,'maxScrollY:',this.maxScrollY);
-            var $wrapper = $(this.wrapper);
-            var $pullDown = $wrapper.find('.pulldown');
-            var $pullUp = $wrapper.find('.pullup');
-            if(this.y>5){
-                $pullDown.addClass('flip').find('.label').html('松开后刷新...');
-            }else{
-                $pullDown.removeClass('flip').find('.label').html('下拉刷新...');
-            }
-
-            if(this.maxScrollY - this.y >5){
-                $pullUp.addClass('flip').find('.label').html('松开后刷新...');
-            }else{
-                $pullUp.removeClass('flip').find('.label').html('上拉刷新...');
-            }
-        });
-
-        myScroll.on('scrollEnd',function(){
-            console.log('scrollEnd',this);
-            console.log('y:',this.y,'maxScrollY:',this.maxScrollY);
-            var $wrapper = $(this.wrapper);
-            var $pullDown = $wrapper.find('.pulldown');
-            var $pullUp = $wrapper.find('.pullup');
-            var data = null;
-
-            if($pullDown.hasClass('flip')){
-                $pullDown.removeClass('flip').addClass('loading').find('.label').html('加载中...');
-                $wrapper.css('top',0);
-                getData($wrapper,data,0);  // 0 表示下拉刷新
-            }
-
-            if($pullUp.hasClass('flip')){
-                $pullUp.removeClass('flip').addClass('loading').find('.label').html('加载中...');
-                getData($wrapper,data,1); // 1 表示上拉刷新
-            }
-        });
-    }
-    
-
-    function getData($obj,data,direction){
+    function getData($obj){
          $.ajax({
             url:  "http://jk.duoju.info/api/party/comment/list?partyId=" + id + "&lastId=" + lastId,
             type: 'get',
@@ -146,73 +93,41 @@ var util = {
                     var info = data.info,
                         list = info.list,
                         commentHTML = "";
-                        lastId = list[list.length-1].id;
-
-
-
-                    if(!direction){
-                        $obj.find('.pulldown').removeClass('loading').find('.label').html('松开后刷新...');
-                        $obj.css('top',0);
-
-                        renderHtml($obj, list,direction);
-                       
-                    }else{
-                        $obj.find('.pullup').removeClass('loading').find('.label').html('松开后刷新...');
-
-                        renderHtml($obj, list,direction);
-                       
-                    };
+                        if(list.length){
+                             lastId = list[list.length-1].id;
+                             renderHtml($obj, list);
+                        }else{
+                             $('.load-more').unbind('touchstart').html('暂无更多评论');
+                        }
                 }
             }
         });
     }
-
-
 function dateFormat (mdate, from,to) {
 
   return mdate.substr(from,to);
 }
 
-
-function renderHtml(obj, res ,direction){
+function renderHtml(obj, res){
     $.each(res,function(index,item){
-                var str = '<div class="comm-top">\
-                            <span class="avatar">\
-                                <img src="'+ item.user.smallAvatar +'" alt="'+ item.user.username +'">\
-                            </span>\
-                            <span class="uname">'+ item.user.username +'</span>\
-                            <span class="time">'+ dateFormat(item.addTime,11,5) +'</span>\
-                        </div>\
-                        <div class="comm-con">'+ item.content +'</div>';
-            if(!direction){
-                obj.find('ul').prepend('<li class="item">'+str+'</li>')
-            }else{
-                obj.find('ul').append('<li class="item">'+str+'</li>')
-            }
-
-             myScroll.refresh();
-        
+        var str = '<div class="comm-top">\
+                    <span class="avatar">\
+                        <img src="'+ item.user.smallAvatar +'" alt="'+ item.user.username +'">\
+                    </span>\
+                    <span class="uname">'+ item.user.username +'</span>\
+                    <span class="time">'+ dateFormat(item.addTime,11,5) +'</span>\
+                </div>\
+                <div class="comm-con">'+ item.content +'</div>';
+        obj.append('<li class="item">'+str+'</li>')
     });
 }
 
 
-
-
-
-
-
-
-
-
 $(function(){
     
-	var	$comment = $('#comment');
+    var $comment = $('#comment');
         $commentList = $('#commentList');
-      
-		
 
-
-  //  loaded();
 
 
     $.ajax({
@@ -221,25 +136,30 @@ $(function(){
         dataType: 'jsonp',
         jsonp:'callback',
         success:function(data){
-    		if(data.code ===1){
-    			var info = data.info,
-    				list = info.list,
-    				commentHTML = "";
+            if(data.code ===1){
+                var info = data.info,
+                    list = info.list,
+                    commentHTML = "";
                     lastId = list[list.length-1].id;
-    			if(list.length > 0){
-    				commentHTML = template('commentTpl', info);
-    				$commentList.html(commentHTML);
-    			}else{
+                if(list.length > 0){
+                    commentHTML = template('commentTpl', info);
+                    $commentList.html(commentHTML);
+                    if(list.length <=19){
+                        $('.load-more').hide();
+                    }
+                }else{
+                     $('.load-more').hide();
                     $comment.html('<div class="comment-bd" style="padding:50px;text-align:center"> 暂无评论...... </div> ');
                 }
-
-                setTimeout(function(){
-                    loaded();
-                }, 200);
-                
-    		}
+            }
         }
     });
+
+
+    $('.load-more').bind('touchstart',function(e){
+        e.preventDefault();
+        getData($commentList);
+    })
 
 
 });

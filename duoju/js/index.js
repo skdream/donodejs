@@ -214,7 +214,7 @@ $(function(){
 				   	isCustom:true,
 				   	autoMove: true,
 				   	content:'<div class="place">'+ party.place+'</div>',
-				   	offset: new AMap.Pixel(-12,70),
+				   	offset: new AMap.Pixel(-12,52),
 				   	size:new AMap.Size(300,0)
 				   }); 
 				}
