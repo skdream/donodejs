@@ -115,8 +115,11 @@ body{
 }
 .article{
 	padding:10px;
+	color:#3c3c3c;
 	background-color: #fff;
 	margin-bottom: 10px;
+	line-height: 22px;
+	font-size: 16px;
 	border-bottom: 1px solid #dddddd;
 }
 .act{
@@ -594,10 +597,12 @@ width: 100%;
 }
 .eval-item{
 	position: relative;
-
 	margin: 0 10px 10px;
-		margin-left: 60px;
-		border-bottom: 1px solid #ddd;
+	margin-left: 60px;
+	border-bottom: 1px solid #ddd;
+}
+.eval-item:last-child{
+	border-bottom: none;
 }
 
 .eval-item .eval-avatar{

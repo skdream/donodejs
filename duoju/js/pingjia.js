@@ -22,36 +22,54 @@ var util = {
     }
 }
 
-$(function(){
-    
-    var id = util.getParam('partyId'),
-        detailURL = "", // "http://jk.duoju.info/api/party/detail/" + id,
-        detailId = "",
-        url = document.location.href,
-        $evalTop = $('#evalTop'),
-        $evaluationList = $("#evaluationList");
-      
-        detailURL =  " http://jk.duoju.info/api/party/evaluation/list?partyId=" + id + "&lastId=0";
+var partyId = util.getParam('partyId'),
+    lastId = 0,
+    $evalTop = $('#evalTop'),
+    $evaluationList = $("#evaluationList");
 
-    var infoWindow,
-        map, 
-        level = 14;
+    //evaluationURL =  " http://jk.duoju.info/api/party/evaluation/list?partyId=" + partyId + "&lastId="+lastId;
+
+
+function getEvaluation(){
 
     $.ajax({
-        url: detailURL,
+        url: "http://jk.duoju.info/api/party/evaluation/list?partyId=" + partyId + "&lastId="+lastId,
         type: 'get',
         dataType: 'jsonp',
         jsonp:'callback',
         crossDomain: true,
         success:function(data){
             if(data.code ===1){
-                var info = data.info,
-                    evalHTML = "";        
-                    evalHTML = template('evalTpl', info);
+                var info = data.info;
+                var list = info.evaluationList;
+                if(lastId==0){
+                    var evalHTML = template('evalTpl', info);
                     $evalTop.html(evalHTML);
-                var evaluationListHTML = template('evaluationListTpl', info);
-                $evaluationList.html( evaluationListHTML );
+                }
+
+
+                if(list.length > 0){
+                    lastId = list[list.length-1].id;
+                    var evaluationListHTML = template('evaluationListTpl', info);
+                    $evaluationList.append( evaluationListHTML );
+                    if(list.length <10){
+                        $('.load-more').hide();
+                    }
+                }else{
+                     $('.load-more').hide();
+                    $evaluationList.html('<div style="padding:50px;text-align:center"> 暂无评价...... </div> ');
+                }
             }
         }
     });
+}
+
+$(function(){
+    
+    getEvaluation();
+    $('.load-more').bind('touchstart',function(e){
+        e.preventDefault();
+        getEvaluation();
+    })
+
 });

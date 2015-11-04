@@ -291,7 +291,7 @@
 			</div>
 			<div class="act-item__bd">
 				<span class="">
-					<%= (priceRange == -1) ? '免费':priceRange %>
+					<%= (priceRange == '-1') ? '免费':priceRange %>
 				</span>
 			</div>
 		</div>
@@ -309,7 +309,7 @@
 				</span>
 				<span class="sep">~</span>
 				<span class="time">
-					<%= dateFormat(endTime,5,11)%>
+					<%= endTime?dateFormat(endTime,5,11):''%>
 				</span>
 				
 			</div>

@@ -140,8 +140,9 @@ $(function(){
                 var info = data.info,
                     list = info.list,
                     commentHTML = "";
-                    lastId = list[list.length-1].id;
+                    
                 if(list.length > 0){
+                    lastId = list[list.length-1].id;
                     commentHTML = template('commentTpl', info);
                     $commentList.html(commentHTML);
                     if(list.length <=19){
@@ -160,6 +161,4 @@ $(function(){
         e.preventDefault();
         getData($commentList);
     })
-
-
 });

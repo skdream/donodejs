@@ -221,7 +221,9 @@ $(function(){
 				   }); 
 				}
 				infoWindow.open(map, marker.getPosition());
-				$price.html(party.priceRange)
+
+				var price = (party.priceRange==-1)?'免费':party.priceRange;
+				$price.html( price );
 			}
 		}
 	})

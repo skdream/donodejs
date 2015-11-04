@@ -6,8 +6,8 @@ var concat = require('gulp-concat');
 var shrink = require('gulp-cssshrink');
 var minifyHTML = require('gulp-minify-html');
 var Imagemin = require('imagemin');
-var sass = require('gulp-sass');
-var clean = require('gulp-clean');
+//var sass = require('gulp-sass');
+//var clean = require('gulp-clean');
 
 
 // 静态文件打包合并
@@ -51,12 +51,12 @@ gulp.task('image', function () {
       });
 });
 
-
+/*
 gulp.task('clean', function () {
     return gulp.src('./dist', {read: false})
         .pipe(clean());
 });
-
+*/
 
 
 gulp.task('data', function () {
